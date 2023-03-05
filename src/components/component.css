@@ -1,0 +1,16 @@
+.header{
+    background-color:  #722F37;
+    margin: 0;
+    padding: 10px;
+}
+.svg-background{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+    padding: 10px;
+}
+.cart{
+    height: 30px;
+    width: 30px;
+}
