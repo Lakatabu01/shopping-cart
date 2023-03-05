@@ -34,11 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
-=======
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5"
->>>>>>> 9986996 (restoring from backup)
   }
 }
