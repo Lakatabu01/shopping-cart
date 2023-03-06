@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import { Header } from "./components/header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Store } from "./components/store";
@@ -7,13 +8,22 @@ import { About } from "./components/about";
 import { Footer } from "./components/footer";
 
 function App() {
+  const [itemsPurchased, setItemsPurchased] = useState(0);
+
+  const handleClick = () => {
+    setItemsPurchased(itemsPurchased + 1);
+  };
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header quantity={itemsPurchased} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
+          <Route
+            path="/store"
+            element={<Store count={handleClick} items={itemsPurchased} />}
+          />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />

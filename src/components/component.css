@@ -2,6 +2,7 @@
     background-color:  #722F37;
     margin: 0;
     padding: 10px;
+    display: flex;
 }
 .svg-background{
     background-color: white;
@@ -10,7 +11,29 @@
     border-radius: 25px;
     padding: 10px;
 }
+.svg-container{
+    position: relative;
+    height: 55px;
+    width: 33px;
+}
 .cart{
     height: 30px;
     width: 30px;
+}
+.quantity > div{  
+    color: white;
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+.quantity{
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+    z-index: 3;
+    background-color: blue;
+    border-radius: 50%;
+    padding: 4px;
+    height: 15px;
+    width: 15px;
+    
 }

@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./component.css";
 import cartSvg from "../assets/cart-variant.svg";
 
-export const Header = () => {
+export const Header = (props) => {
   const logoStyle = {
     color: "#FFFF00",
   };
@@ -11,6 +11,7 @@ export const Header = () => {
   return (
     <div className="header">
       <p style={logoStyle}>Top Store</p>
+
       <ul>
         <Link to="/">
           <li>Home</li>
@@ -25,8 +26,21 @@ export const Header = () => {
         </NavLink>
       </ul>
 
-      <div className="svg-background">
-        <img src={cartSvg} alt="cart icon" className="cart" />
+      <div className="svg-container">
+        <div className="svg-background">
+          <img src={cartSvg} alt="cart icon" className="cart" />
+
+          {/* This piece of code checks if an item 
+        has been added to cart then displays a
+        notification*/}
+          {props.quantity > 0 ? (
+            <div className="quantity">
+              <div> {props.quantity} </div>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );

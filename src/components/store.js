@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-//i need to figure out how it wont affect in production because
-// the api needs to first of all fetch before it can render to the UI
-//commit the code
-
-export const Store = () => {
+export const Store = (props) => {
   useEffect(() => {
     fetchInfo();
   }, []);
@@ -25,6 +21,7 @@ export const Store = () => {
   //loop through the state and return image and price of the products
   return (
     <div>
+      <p> items purchased : {props.items}</p>
       <div>
         {products.map((item) => (
           <div key={item.id}>
@@ -32,7 +29,7 @@ export const Store = () => {
             <p>{item.title}</p>
             <p>{item.price}</p>
             <div>
-              <button>Add to cart</button>
+              <button onClick={props.count}>Add to cart</button>
             </div>
           </div>
         ))}
