@@ -17,7 +17,7 @@ export const Header = (props) => {
           <li>Home</li>
         </Link>
 
-        <NavLink to="/store">
+        <NavLink data-testId="test-app" className={"link"} to="/store">
           <li>Store</li>
         </NavLink>
 

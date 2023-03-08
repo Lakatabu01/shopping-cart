@@ -16,7 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div data-testid="test-app" className="App">
         <Header quantity={itemsPurchased} />
         <Routes>
           <Route path="/" element={<Home />} />

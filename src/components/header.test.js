@@ -9,25 +9,19 @@ describe("Ensure links render the right component", () => {
     render(
       <MemoryRouter initialEntries={["/"]}>
         <Header />
-        <Routes>
-          <Route path="/store" element={<Header />} />
-        </Routes>
       </MemoryRouter>
     );
 
-    const StoreLink = screen.getByText("Store");
-    userEvent.click(StoreLink);
+    const storeLink = screen.getByText("Store");
+    userEvent.click(storeLink);
 
-    expect(StoreLink).toBeInTheDocument();
+    expect(storeLink).toBeInTheDocument();
   });
 
   it("ensure about link is present to navigate to its url", () => {
     render(
       <MemoryRouter initialEntries={["/"]}>
         <Header />
-        <Routes>
-          <Route path="/about" element={<Header />} />
-        </Routes>
       </MemoryRouter>
     );
 
@@ -41,9 +35,6 @@ describe("Ensure links render the right component", () => {
     render(
       <MemoryRouter initialEntries={["/"]}>
         <Header />
-        <Routes>
-          <Route path="/about" element={<Header />} />
-        </Routes>
       </MemoryRouter>
     );
 
@@ -51,5 +42,15 @@ describe("Ensure links render the right component", () => {
     userEvent.click(homeLink);
 
     expect(homeLink).toBeInTheDocument();
+  });
+
+  test("contains child elements", () => {
+    render(
+      <MemoryRouter initialEntries={["/"]}>
+        <Header />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByTestId("test-app")).toHaveClass("link");
   });
 });

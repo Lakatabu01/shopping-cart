@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { fetchProduct } from "./api";
 
 export const Store = (props) => {
   useEffect(() => {
@@ -8,10 +9,9 @@ export const Store = (props) => {
   const [products, setProducts] = useState(null);
 
   const fetchInfo = async () => {
-    const data = await fetch("https://fakestoreapi.com/products");
-    const refinedData = await data.json();
-    setProducts(refinedData);
-    console.log(refinedData);
+    const data = await fetchProduct();
+    setProducts(data);
+    console.log(data);
   };
 
   //Display Loading while waiting for for the API to fetch
