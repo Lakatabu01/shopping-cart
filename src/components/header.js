@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./component.css";
 import cartSvg from "../assets/cart-variant.svg";
+import PopUp from "./popup";
 
 export const Header = (props) => {
+  const [visible, setVisible] = useState(false);
+
   const logoStyle = {
     color: "#FFFF00",
   };
 
+  //This updates the state to make pop-up visible
+  const openPopup = () => {
+    setVisible(true);
+  };
+
+  const closePopup = () => {
+    setVisible(false);
+  };
+
   return (
     <div className="header">
+      <PopUp visibility={`popup ${visible ? "visible" : ""}`} />
+
       <p style={logoStyle}>Top Store</p>
 
       <ul>
