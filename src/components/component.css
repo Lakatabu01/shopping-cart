@@ -47,5 +47,10 @@
     display: none;
 }
 .popup.visible{
-    display: block;
+    display: flex;
+    padding: 10px;
+}
+.popup > div {
+    padding: 10px;
+
 }

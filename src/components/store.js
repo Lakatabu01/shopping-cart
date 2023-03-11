@@ -25,9 +25,12 @@ export const Store = (props) => {
       <div>
         {products.map((item) => (
           <div key={item.id}>
-            <img src={item.image} alt="cloth" />
-            <p>{item.title}</p>
-            <p>{item.price}</p>
+            <div>
+              <img src={item.image} alt="cloth" />
+              <p>{item.title}</p>
+              <p>{item.price}</p>
+            </div>
+
             <div>
               <button onClick={props.count}>Add to cart</button>
             </div>

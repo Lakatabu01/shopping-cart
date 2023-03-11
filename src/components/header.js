@@ -22,7 +22,10 @@ export const Header = (props) => {
 
   return (
     <div className="header">
-      <PopUp visibility={`popup ${visible ? "visible" : ""}`} />
+      <PopUp
+        close={closePopup}
+        visibility={`popup ${visible ? "visible" : ""}`}
+      />
 
       <p style={logoStyle}>Top Store</p>
 
@@ -31,7 +34,7 @@ export const Header = (props) => {
           <li>Home</li>
         </Link>
 
-        <NavLink data-testId="test-app" className={"link"} to="/store">
+        <NavLink data-testid="test-app" className={"link"} to="/store">
           <li>Store</li>
         </NavLink>
 
@@ -40,7 +43,7 @@ export const Header = (props) => {
         </NavLink>
       </ul>
 
-      <div className="svg-container">
+      <div onClick={openPopup} className="svg-container">
         <div className="svg-background">
           <img src={cartSvg} alt="cart icon" className="cart" />
 
