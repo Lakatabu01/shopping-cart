@@ -23,6 +23,8 @@ export const Header = (props) => {
   return (
     <div className="header">
       <PopUp
+        //populatePopup={props.populatePopup}
+        productsSelected={props.productsSelected}
         close={closePopup}
         visibility={`popup ${visible ? "visible" : ""}`}
       />

@@ -10,6 +10,8 @@ import { Footer } from "./components/footer";
 function App() {
   const [itemsPurchased, setItemsPurchased] = useState(0);
   const [productsSelected, setProductsSelected] = useState([]);
+  const [id, setId] = useState(0);
+  //This state stores only one instance of a selected products
 
   useEffect(() => {
     console.log(productsSelected);
@@ -26,6 +28,7 @@ function App() {
       price: parseInt(
         e.target.parentNode.previousElementSibling.children[2].textContent
       ),
+      // id: setId(id + 1),
     };
     setProductsSelected((prevProducts) => [...prevProducts, productInfo]);
   };
@@ -33,7 +36,7 @@ function App() {
   return (
     <BrowserRouter>
       <div data-testid="test-app" className="App">
-        <Header quantity={itemsPurchased} />
+        <Header quantity={itemsPurchased} productsSelected={productsSelected} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
