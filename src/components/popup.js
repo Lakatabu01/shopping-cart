@@ -23,7 +23,7 @@ const PopUp = (props) => {
 
   useEffect(() => {
     const totPrice = initialCart.reduce((accumulator, currentValue) => {
-      return accumulator + currentValue.price;
+      return accumulator + currentValue.price * currentValue.quantity;
     }, 0);
 
     setTotal(totPrice);
@@ -87,6 +87,9 @@ const PopUp = (props) => {
                           return item;
                         });
                         setInitialCart(updatedCart);
+                        //setInterval(() => {
+                        //setTotal(total + object.price);
+                        // }, 1000);
                       }
                     }}
                   >
