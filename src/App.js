@@ -10,8 +10,6 @@ import { Footer } from "./components/footer";
 function App() {
   const [itemsPurchased, setItemsPurchased] = useState(0);
   const [productsSelected, setProductsSelected] = useState([]);
-  const [id, setId] = useState(0);
-  //This state stores only one instance of a selected products
 
   useEffect(() => {
     console.log(productsSelected);
@@ -28,7 +26,7 @@ function App() {
       price: parseInt(
         e.target.parentNode.previousElementSibling.children[2].textContent
       ),
-      // id: setId(id + 1),
+      quantity: 1,
     };
     setProductsSelected((prevProducts) => [...prevProducts, productInfo]);
   };

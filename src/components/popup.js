@@ -29,6 +29,22 @@ const PopUp = (props) => {
     setTotal(totPrice);
   }, [initialCart]);
 
+  const productNumber = {
+    border: "1px solid black",
+    margin: "2px",
+    width: "20px",
+    display: "flex",
+    justifyContent: "center",
+  };
+
+  // const increaseItemNumber = (e) => {
+  // const currentNumber = parseInt(e.target.previousElementSibling.textContent);
+  // setItemNumber(currentNumber + 1);
+  // e.target.previousElementSibling.textContent = itemNumber;
+  //};
+
+  //const decreaseItemNumber = () => {}
+
   return (
     <div className={props.visibility}>
       <div className="quantity-info">
@@ -41,6 +57,42 @@ const PopUp = (props) => {
                   <img src={object.image} alt="product" />
                   <p>{object.productTitle}</p>
                   <p>{object.price}</p>
+                </div>
+
+                <div className="increment">
+                  <button
+                    onClick={() => {
+                      if (object.quantity > 0) {
+                        const updatedCart = initialCart.map((item) => {
+                          if (item.image === object.image) {
+                            return { ...item, quantity: item.quantity - 1 };
+                          }
+                          return item;
+                        });
+                        setInitialCart(updatedCart);
+                      }
+                    }}
+                  >
+                    {" "}
+                    -{" "}
+                  </button>
+                  <div style={productNumber}> {object.quantity} </div>
+                  <button
+                    onClick={() => {
+                      if (object.quantity > -1) {
+                        const updatedCart = initialCart.map((item) => {
+                          if (item.image === object.image) {
+                            return { ...item, quantity: item.quantity + 1 };
+                          }
+                          return item;
+                        });
+                        setInitialCart(updatedCart);
+                      }
+                    }}
+                  >
+                    {" "}
+                    +{" "}
+                  </button>
                 </div>
               </div>
             ))}
@@ -61,3 +113,6 @@ const PopUp = (props) => {
 };
 
 export default PopUp;
+
+//create button to add and remove additional item
+//confirm why reducer is removing decimal point
