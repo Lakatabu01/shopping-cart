@@ -1,3 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`everything rendered on the app 1`] = `undefined`;
+exports[`everything rendered on the app 1`] = `
+<div
+  class="App"
+  data-testid="test-all"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="popup "
+    >
+      <div
+        class="quantity-info"
+      >
+        <div>
+          <h1>
+            My Shopping Cart
+          </h1>
+          <div
+            class="scroll"
+          />
+          <div>
+            <h3>
+              Total: $ 
+              0
+            </h3>
+            <button>
+              Checkout
+            </button>
+            <button>
+              Back
+            </button>
+          </div>
+        </div>
+        <div>
+          <button>
+            X
+          </button>
+        </div>
+      </div>
+    </div>
+    <p
+      style="color: rgb(255, 255, 0);"
+    >
+      Top Store
+    </p>
+    <ul>
+      <a
+        href="/"
+      >
+        <li>
+          Home
+        </li>
+      </a>
+      <a
+        class="link"
+        data-testid="test-app"
+        href="/store"
+      >
+        <li>
+          Store
+        </li>
+      </a>
+      <a
+        class=""
+        href="/about"
+      >
+        <li>
+          About
+        </li>
+      </a>
+    </ul>
+    <div
+      class="svg-container"
+    >
+      <div
+        class="svg-background"
+      >
+        <img
+          alt="cart icon"
+          class="cart"
+          src="cart-variant.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="home-text"
+    >
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, omnis et? Eaque voluptatum culpa mollitia ipsa?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ad esse ducimus neque voluptate nobis.
+      </p>
+    </div>
+    <div>
+      <img
+        alt="Woman with shopping bags"
+        src="model.jpg"
+      />
+    </div>
+  </div>
+  <div
+    style="background-color: rgb(211, 211, 211); padding: 10px; position: absolute; bottom: 0px; right: 0px; left: 0px;"
+  >
+    Copyright © 2023 Olanrewaju
+  </div>
+</div>
+`;

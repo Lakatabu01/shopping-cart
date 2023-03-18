@@ -1,7 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { getByTestId, render, screen } from "@testing-library/react";
 import App from "./App";
 
 test("everything rendered on the app", () => {
-  const { app } = render(<App />);
-  expect(app).toMatchSnapshot();
+  render(<App />);
+  expect(screen.getByTestId("test-all")).toMatchSnapshot();
 });

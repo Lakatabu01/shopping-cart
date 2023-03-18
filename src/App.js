@@ -33,7 +33,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div data-testid="test-app" className="App">
+      <div data-testid="test-all" className="App">
         <Header quantity={itemsPurchased} productsSelected={productsSelected} />
         <Routes>
           <Route path="/" element={<Home />} />

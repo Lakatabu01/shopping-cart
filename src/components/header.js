@@ -54,7 +54,7 @@ export const Header = (props) => {
         notification*/}
           {props.quantity > 0 ? (
             <div className="quantity">
-              <div> {props.quantity} </div>
+              <div> * </div>
             </div>
           ) : (
             ""
