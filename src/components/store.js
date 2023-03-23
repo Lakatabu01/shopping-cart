@@ -21,18 +21,24 @@ export const Store = (props) => {
   //loop through the state and return image and price of the products
   return (
     <div>
-      <p> items purchased : {props.items}</p>
-      <div>
+      <div className="products-tray">
         {products.map((item) => (
           <div key={item.id}>
-            <div>
-              <img src={item.image} alt="cloth" />
-              <p>{item.title}</p>
-              <p>{item.price}</p>
-            </div>
+            <div className="each-item">
+              <div>
+                <img className="products-img" src={item.image} alt="cloth" />
+                <p>{item.title}</p>
+              </div>
 
-            <div>
-              <button onClick={props.count}>Add to cart</button>
+              <div>
+                <p> {item.price}</p>
+              </div>
+
+              <div className="btn-div">
+                <button className="cart-button" onClick={props.count}>
+                  Add to cart
+                </button>
+              </div>
             </div>
           </div>
         ))}

@@ -15,16 +15,15 @@ function App() {
     console.log(productsSelected);
   }, [productsSelected]);
 
-  //Get information of the products added to cart and
-  //put it in a state
+  //Get right information that navigates to the needed info
   const handleClick = (e) => {
     setItemsPurchased(itemsPurchased + 1);
     let productInfo = {
-      image: e.target.parentNode.previousElementSibling.firstChild.src,
+      image: e.target.parentNode.parentNode.firstChild.firstChild.src,
       productTitle:
-        e.target.parentNode.previousElementSibling.children[1].textContent,
+        e.target.parentNode.parentNode.firstChild.lastChild.textContent,
       price: parseInt(
-        e.target.parentNode.previousElementSibling.children[2].textContent
+        e.target.parentNode.previousElementSibling.firstChild.textContent
       ),
       quantity: 1,
     };

@@ -30,20 +30,14 @@ const PopUp = (props) => {
   }, [initialCart]);
 
   const productNumber = {
-    border: "1px solid black",
     margin: "2px",
     width: "20px",
     display: "flex",
     justifyContent: "center",
+    backgroundColor: "rgb(233, 231, 231)",
+    alignItems: "center",
+    padding: "10px",
   };
-
-  // const increaseItemNumber = (e) => {
-  // const currentNumber = parseInt(e.target.previousElementSibling.textContent);
-  // setItemNumber(currentNumber + 1);
-  // e.target.previousElementSibling.textContent = itemNumber;
-  //};
-
-  //const decreaseItemNumber = () => {}
 
   return (
     <div className={props.visibility}>
@@ -52,15 +46,20 @@ const PopUp = (props) => {
           <h1>My Shopping Cart</h1>
           <div className="scroll">
             {initialCart.map((object) => (
-              <div key={uuidv4()}>
-                <div>
-                  <img src={object.image} alt="product" />
+              <div className="carted" key={uuidv4()}>
+                <div className="carted-info">
+                  <img
+                    className="products-img"
+                    src={object.image}
+                    alt="product"
+                  />
                   <p>{object.productTitle}</p>
-                  <p>{object.price}</p>
+                  <p>$ {object.price}</p>
                 </div>
 
                 <div className="increment">
                   <button
+                    className="minus"
                     onClick={() => {
                       if (object.quantity > 0) {
                         const updatedCart = initialCart.map((item) => {
@@ -78,6 +77,7 @@ const PopUp = (props) => {
                   </button>
                   <div style={productNumber}> {object.quantity} </div>
                   <button
+                    className="plus"
                     onClick={() => {
                       if (object.quantity > -1) {
                         const updatedCart = initialCart.map((item) => {
@@ -87,9 +87,6 @@ const PopUp = (props) => {
                           return item;
                         });
                         setInitialCart(updatedCart);
-                        //setInterval(() => {
-                        //setTotal(total + object.price);
-                        // }, 1000);
                       }
                     }}
                   >

@@ -8,7 +8,7 @@ export const Header = (props) => {
   const [visible, setVisible] = useState(false);
 
   const logoStyle = {
-    color: "#FFFF00",
+    color: "#FFCBA4",
   };
 
   //This updates the state to make pop-up visible
@@ -29,36 +29,40 @@ export const Header = (props) => {
         visibility={`popup ${visible ? "visible" : ""}`}
       />
 
-      <p style={logoStyle}>Top Store</p>
+      <p style={logoStyle} className="logo-style">
+        Dura_glam Store
+      </p>
 
-      <ul>
-        <Link to="/">
-          <li>Home</li>
-        </Link>
+      <div className="left-header">
+        <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
 
-        <NavLink data-testid="test-app" className={"link"} to="/store">
-          <li>Store</li>
-        </NavLink>
+          <NavLink data-testid="test-app" className={"link"} to="/store">
+            <li>Store</li>
+          </NavLink>
 
-        <NavLink to="/about">
-          <li>About</li>
-        </NavLink>
-      </ul>
+          <NavLink to="/about">
+            <li>About</li>
+          </NavLink>
+        </ul>
 
-      <div onClick={openPopup} className="svg-container">
-        <div className="svg-background">
-          <img src={cartSvg} alt="cart icon" className="cart" />
+        <div onClick={openPopup} className="svg-container">
+          <div className="svg-background">
+            <img src={cartSvg} alt="cart icon" className="cart" />
 
-          {/* This piece of code checks if an item 
+            {/* This piece of code checks if an item 
         has been added to cart then displays a
         notification*/}
-          {props.quantity > 0 ? (
-            <div className="quantity">
-              <div> * </div>
-            </div>
-          ) : (
-            ""
-          )}
+            {props.quantity > 0 ? (
+              <div className="quantity">
+                <div> * </div>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </div>
     </div>
