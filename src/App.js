@@ -15,7 +15,7 @@ function App() {
     console.log(productsSelected);
   }, [productsSelected]);
 
-  //Get right information that navigates to the needed info
+  //Get right information to update productsSelected state
   const handleClick = (e) => {
     setItemsPurchased(itemsPurchased + 1);
     let productInfo = {
@@ -23,7 +23,7 @@ function App() {
       productTitle:
         e.target.parentNode.parentNode.firstChild.lastChild.textContent,
       price: parseInt(
-        e.target.parentNode.previousElementSibling.firstChild.textContent
+        e.target.parentNode.previousElementSibling.lastChild.textContent
       ),
       quantity: 1,
     };

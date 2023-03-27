@@ -14,6 +14,10 @@
     border-radius: 25px;
     padding: 10px;
 }
+.svg-background:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: 1px solid blue;
+}
 .svg-container{
     position: relative;
     height: 55px;
@@ -27,8 +31,9 @@
 }
 .quantity > div{  
     color: red;
-    padding-left: 2px;
-    padding-bottom: 2px;
+    position: relative;
+    font-size: 2em;
+    bottom: 6px;
 }
 .quantity{
     position: absolute;
@@ -101,10 +106,13 @@ ul{
     margin-right: 5em
 }
 li{
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-decoration: none;
     color: white;
     margin-right: 3em;
+}
+li:hover{
+    font-size: 1.2em;
 }
 .logo-style{
     font-size: 1.5em;
@@ -303,4 +311,54 @@ li{
     align-items: center;
     width: 20em;
     padding: 1em 2em;
+}
+.socials{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 2.5em;
+}
+.sm{
+    height: 8em;
+    width: 8em;
+    cursor: pointer;
+}
+.sm:hover{
+    box-shadow: 0 8px 16px 0 #722F37, 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.about-page{
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    flex-direction: column;
+}
+.gif-div{
+    position: absolute;
+    bottom: 40%;
+    left: 45%;
+}
+.price{
+    display: flex;
+}
+.checkout-btn{
+    background-color: green;
+    border-radius: 5%;
+    border: 1px solid green;
+    color: white;
+    cursor: pointer;
+}
+.bck-btn{
+    background-color: orangered;
+    border-radius: 5%;
+    border: 1px solid orangered;
+    color: white;
+    cursor: pointer;  
+}
+.total-div{
+    width: 80%;
+}
+.checkout-btn, .bck-btn {
+    width: 100%;
+    margin: 0.5em;
+    padding: 0.5em;
 }
