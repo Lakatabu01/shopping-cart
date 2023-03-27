@@ -5,6 +5,8 @@ const PopUp = (props) => {
   const [initialCart, setInitialCart] = useState([]);
   const [total, setTotal] = useState(0);
 
+  //Checks if the product image has not been displayed
+  //to prevent multiple renders of same image
   useEffect(() => {
     const filteredProducts = props.productsSelected.filter((object) => {
       if (initialCart) {
@@ -21,6 +23,7 @@ const PopUp = (props) => {
     setInitialCart([...initialCart, ...filteredProducts]);
   }, [props.productsSelected]);
 
+  //This sums up the total price of items added to cart
   useEffect(() => {
     const totPrice = initialCart.reduce((accumulator, currentValue) => {
       return accumulator + currentValue.price * currentValue.quantity;
@@ -97,11 +100,11 @@ const PopUp = (props) => {
               </div>
             ))}
           </div>
-          <div>
+          <div className="total-div">
             <h3>Total: $ {total}</h3>
 
-            <button>Checkout</button>
-            <button>Back</button>
+            <button className="checkout-btn">Checkout</button>
+            <button className="bck-btn">Back</button>
           </div>
         </div>
         <div>
@@ -113,6 +116,3 @@ const PopUp = (props) => {
 };
 
 export default PopUp;
-
-//create button to add and remove additional item
-//confirm why reducer is removing decimal point
