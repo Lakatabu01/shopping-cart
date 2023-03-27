@@ -35,7 +35,7 @@ function App() {
       <div data-testid="test-all" className="App">
         <Header quantity={itemsPurchased} productsSelected={productsSelected} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} exact />
           <Route
             path="/store"
             element={<Store count={handleClick} items={itemsPurchased} />}
