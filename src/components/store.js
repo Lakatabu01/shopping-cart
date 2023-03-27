@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { fetchProduct } from "./api";
-import loadGif from "../assets/loading.gif";
 
 export const Store = (props) => {
   useEffect(() => {
@@ -12,19 +11,16 @@ export const Store = (props) => {
   const fetchInfo = async () => {
     const data = await fetchProduct();
     setProducts(data);
+    console.log(data);
   };
 
   //Display Loading while waiting for for the API to fetch
   if (!products) {
-    return (
-      <div className="gif-div">
-        <img src={loadGif} alt="gif" />
-      </div>
-    );
+    return <div>Loading...</div>;
   }
   //loop through the state and return image and price of the products
   return (
-    <div className="store-body">
+    <div>
       <div className="products-tray">
         {products.map((item) => (
           <div key={item.id}>
@@ -34,8 +30,7 @@ export const Store = (props) => {
                 <p>{item.title}</p>
               </div>
 
-              <div className="price">
-                <p>$</p>
+              <div>
                 <p> {item.price}</p>
               </div>
 

@@ -11,7 +11,11 @@ function App() {
   const [itemsPurchased, setItemsPurchased] = useState(0);
   const [productsSelected, setProductsSelected] = useState([]);
 
-  //Get right information to update productsSelected state
+  useEffect(() => {
+    console.log(productsSelected);
+  }, [productsSelected]);
+
+  //Get right information that navigates to the needed info
   const handleClick = (e) => {
     setItemsPurchased(itemsPurchased + 1);
     let productInfo = {
@@ -19,7 +23,7 @@ function App() {
       productTitle:
         e.target.parentNode.parentNode.firstChild.lastChild.textContent,
       price: parseInt(
-        e.target.parentNode.previousElementSibling.lastChild.textContent
+        e.target.parentNode.previousElementSibling.firstChild.textContent
       ),
       quantity: 1,
     };

@@ -14,10 +14,6 @@
     border-radius: 25px;
     padding: 10px;
 }
-.svg-background:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    border: 1px solid blue;
-}
 .svg-container{
     position: relative;
     height: 55px;
@@ -31,9 +27,8 @@
 }
 .quantity > div{  
     color: red;
-    font-size: 2em;
-    position: relative;
-    top: 3px;
+    padding-left: 2px;
+    padding-bottom: 2px;
 }
 .quantity{
     position: absolute;
@@ -45,9 +40,6 @@
     padding: 4px;
     height: 15px;
     width: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .popup{
     position: fixed;
@@ -63,7 +55,6 @@
     padding: 10px;
     display: block;
     background-color: rgb(233, 231, 231);
-    z-index: 2;
 
 }
 .popup > div {
@@ -110,13 +101,10 @@ ul{
     margin-right: 5em
 }
 li{
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-decoration: none;
     color: white;
     margin-right: 3em;
-}
-li:hover{
-    font-size: 1.2em;
 }
 .logo-style{
     font-size: 1.5em;
@@ -306,14 +294,9 @@ li:hover{
     color: orangered;
     border: solid 2px orangered;
     }
-.store-body{
-    position: relative;
-}
-.gif-div{
-    position: absolute;
-    bottom: 40%;
-    left: 45%;
-}
+
+
+
 .carted-info{
     display: flex;
     flex-direction: column;
@@ -321,49 +304,3 @@ li:hover{
     width: 20em;
     padding: 1em 2em;
 }
-.about-page{
-    display: flex;
-    justify-content: center;
-    padding: 3em;
-    flex-direction: column;
-}
-.total-div{
-    width: 80%;
-}
-.checkout-btn, .bck-btn {
-    width: 100%;
-    margin: 0.5em;
-    padding: 0.5em;
-}
-.checkout-btn{
-    background-color: green;
-    border-radius: 5%;
-    border: 1px solid green;
-    color: white;
-    cursor: pointer;
-}
-.bck-btn{
-    background-color: orangered;
-    border-radius: 5%;
-    border: 1px solid orangered;
-    color: white;
-    cursor: pointer;  
-}
-.socials{
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    margin: 2.5em;
-}
-.sm{
-    height: 8em;
-    width: 8em;
-    cursor: pointer;
-}
-.sm:hover{
-    box-shadow: 0 8px 16px 0 #722F37, 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.price{
-    display: flex;
-}
-
