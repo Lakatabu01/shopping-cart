@@ -35,12 +35,12 @@ function App() {
       <div data-testid="test-all" className="App">
         <Header quantity={itemsPurchased} productsSelected={productsSelected} />
         <Routes>
-          <Route path="/" element={<Home />} exact />
+          <Route path="/shopping-cart/" element={<Home />} />
           <Route
-            path="/store"
+            path="/shopping-cart/store"
             element={<Store count={handleClick} items={itemsPurchased} />}
           />
-          <Route path="/about" element={<About />} />
+          <Route path="/shopping-cart/about" element={<About />} />
         </Routes>
         <Footer />
       </div>

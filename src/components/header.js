@@ -35,15 +35,19 @@ export const Header = (props) => {
 
       <div className="left-header">
         <ul>
-          <Link to="/">
+          <Link to="/shopping-cart/">
             <li>Home</li>
           </Link>
 
-          <NavLink data-testid="test-app" className={"link"} to="/store">
+          <NavLink
+            data-testid="test-app"
+            className={"link"}
+            to="/shopping-cart/store"
+          >
             <li>Store</li>
           </NavLink>
 
-          <NavLink to="/about">
+          <NavLink to="/shopping-cart/about">
             <li>About</li>
           </NavLink>
         </ul>
