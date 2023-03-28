@@ -26,10 +26,14 @@ exports[`everything rendered on the app 1`] = `
               Total: $ 
               0
             </h3>
-            <button>
+            <button
+              class="checkout-btn"
+            >
               Checkout
             </button>
-            <button>
+            <button
+              class="bck-btn"
+            >
               Back
             </button>
           </div>
@@ -43,7 +47,7 @@ exports[`everything rendered on the app 1`] = `
     </div>
     <p
       class="logo-style"
-      style="color: rgb(255, 255, 0);"
+      style="color: rgb(255, 203, 164);"
     >
       Dura_glam Store
     </p>
@@ -52,7 +56,7 @@ exports[`everything rendered on the app 1`] = `
     >
       <ul>
         <a
-          href="/"
+          href="/shopping-cart/"
         >
           <li>
             Home
@@ -61,7 +65,7 @@ exports[`everything rendered on the app 1`] = `
         <a
           class="link"
           data-testid="test-app"
-          href="/store"
+          href="/shopping-cart/store"
         >
           <li>
             Store
@@ -69,7 +73,7 @@ exports[`everything rendered on the app 1`] = `
         </a>
         <a
           class=""
-          href="/about"
+          href="/shopping-cart/about"
         >
           <li>
             About
@@ -89,27 +93,6 @@ exports[`everything rendered on the app 1`] = `
           />
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    class="home"
-  >
-    <div
-      class="home-text"
-    >
-      <p>
-        Welcome to our shopping cart - your one-stop destination for all your shopping needs! With our wide range of products, competitive prices, and easy-to-use platform, we make shopping a breeze. Whether you're looking for trendy fashion, cutting-edge technology, or everyday household essentials, we've got you covered.
-      </p>
-      <p>
-        Our user-friendly interface allows you to browse through thousands of products with ease, add items to your cart, and checkout securely in just a few clicks. So why wait? Start shopping now and experience the convenience and affordability of our shopping cart!
-      </p>
-    </div>
-    <div>
-      <img
-        alt="Woman with shopping bags"
-        class="dominant-img"
-        src="model.jpg"
-      />
     </div>
   </div>
   <div
