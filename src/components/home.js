@@ -20,7 +20,7 @@ export const Home = () => {
           convenience and affordability of our shopping cart!
         </p>
 
-        <NavLink to="/store">
+        <NavLink to="/shopping-cart/store">
           <button className="button-17">Lets Go</button>
         </NavLink>
       </div>
